@@ -16,13 +16,11 @@
 		pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 	in
 	{
-		nixosConfigurations = { 
-			sys-config = lib.nixosSystem {
-				inherit system;
-				modules = [./system/configuration.nix];
-				specialArgs = {
-					inherit pkgs-unstable;
-				};
+		nixosConfigurations = lib.nixosSystem {
+			inherit system;
+			modules = [./system/configuration.nix];
+			specialArgs = {
+				inherit pkgs-unstable;
 			};
 		};
 		homeConfigurations = {
