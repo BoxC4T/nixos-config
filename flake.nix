@@ -14,22 +14,20 @@
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
 		pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-	in
-	{
-		nixosConfigurations = lib.nixosSystem {
-			inherit system;
-			modules = [./system/configuration.nix];
-			specialArgs = {
-				inherit pkgs-unstable;
+	in {
+		nixosConfigurations = {
+			main-config = nixpkgs.lib.nixosSystem {
+				inherit system;
+				modules = [./system/configuration.nix];
+				specialArgs = {inherit pkgs-unstable;};	
 			};
 		};
 		homeConfigurations = {
 			home-config = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [ ./home ];
-				extrasSpecialArgs = {
-					inherit pkgs-unstable;
-					inherit inputs;
+				extraSpecialArgs = {
+					inherit pkgs-unstable inputs;
 				};
 			};
 		};
