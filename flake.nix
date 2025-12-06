@@ -6,9 +6,16 @@
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 		home-manager.url = "github:nix-community/home-manager/release-25.11";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+		
+		nixvim = {
+			url = "github:nix-community/nixvim/nixos-25.11";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+		vicinae.url = "github:vicinaehq/vicinae";
+
 	};
 
-	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ...}@inputs:
+	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
 		lib = nixpkgs.lib;
 		system = "x86_64-linux";

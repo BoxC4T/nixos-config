@@ -1,0 +1,9 @@
+{ ... }:
+{
+	imports = [
+		./nixvim
+		./hypr
+		./vicinae
+	];
+	
+}
