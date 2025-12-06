@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, lib, ...}:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -11,4 +11,7 @@
 		neofetch
 		wget
 	];
+	
+	#love me a good font 
+	fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }

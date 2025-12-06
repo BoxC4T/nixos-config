@@ -5,5 +5,9 @@
 		firefox
 		gh
 		lazygit
-		];
+		brightnessctl
+		power-profiles-daemon
+	];
+
+
 }
