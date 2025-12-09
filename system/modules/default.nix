@@ -9,5 +9,6 @@
 		./greeter.nix
 		./desktop.nix
 		./programs.nix
+		./security.nix
 	];
 }

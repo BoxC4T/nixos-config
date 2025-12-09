@@ -1,8 +1,5 @@
-maybe moving to hyprlock using greetd and autologin
-getting the fingerprint reader working
-
 keyboard lighting controll in os?
 
 finishing config
 	nvim
-	waybar
+	hyprlock

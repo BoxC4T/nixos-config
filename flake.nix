@@ -11,11 +11,15 @@
 			url = "github:nix-community/nixvim/nixos-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+	
 		vicinae.url = "github:vicinaehq/vicinae";
+
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
 
 	};
 
-	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+	outputs = {self, nixpkgs, nixpkgs-unstable, home-manager, nixos-hardware, ... }@inputs:
 	let
 		lib = nixpkgs.lib;
 		system = "x86_64-linux";
@@ -25,8 +29,13 @@
 		nixosConfigurations = {
 			main-config = nixpkgs.lib.nixosSystem {
 				inherit system;
-				modules = [./system/configuration.nix];
-				specialArgs = {inherit pkgs-unstable;};	
+				modules = [
+					./system/configuration.nix
+					nixos-hardware.nixosModules.framework-16-7040-amd
+				];
+				specialArgs = {
+					inherit pkgs-unstable;
+				};	
 			};
 		};
 		homeConfigurations = {

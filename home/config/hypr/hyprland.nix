@@ -96,7 +96,8 @@
 				"$mainMod, 8, workspace, 8"
 				"$mainMod, 9, workspace, 9"
 				"$mainMod, 0, workspace, 10"
-				"bind = $mainMod ALT, W, exec, pkill waybar && hyprctl dispatch exec waybar" 
+				#"bind = $mainMod ALT, W, exec, pkill waybar && hyprctl dispatch exec waybar"
+				
 			];
 
 			bindel = [
@@ -110,7 +111,7 @@
 			
 			exec-once = [
 				"vicinae server"
-				"waybar"
+				"ashell"
 			];
 		};
 	};

@@ -1,6 +1,7 @@
 {config, pkgs, lib, ...}:
 
 {
+	
 	environment.systemPackages = with pkgs; [
 		btop
 		fzf
@@ -10,6 +11,7 @@
 		kitty
 		neofetch
 		wget
+		hyprpolkitagent
 	];
 	
 	#love me a good font 
