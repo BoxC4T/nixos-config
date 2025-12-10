@@ -1,10 +1,9 @@
-{inputs, ...}:
+{...}:
 {
-	imports = [
-		inputs.nixvim.homeModules.nixvim
-	];
+  imports = [
+    ./nvim.nix
+    #./plugins
 
-	programs.nixvim = {
-		enable = true;
-	};
+  ];
+
 }
