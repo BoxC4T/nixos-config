@@ -11,6 +11,7 @@
 		pulseaudioFull
 		pavucontrol
 		networkmanagerapplet
+		kdePackages.dolphin
 		
 	];
 

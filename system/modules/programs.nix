@@ -8,7 +8,7 @@
 		git
 		gnumake
 		home-manager
-		kitty
+		ghostty
 		neofetch
 		wget
 		hyprpolkitagent

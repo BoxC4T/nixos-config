@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 	wayland.windowManager.hyprland = {
 		enable = true;
-		package = null;
-		portalPackage = null;
+		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 
 		xwayland = {
 			enable = true;
@@ -18,11 +18,6 @@
 				"col.inactive_border" = "rgba(00000000)";
 				resize_on_border = true ;
 				allow_tearing = false;
-				windowrulev2 = [
-					"noborder, focus:0"
-					"noshadow, focus:0"
-				];
-
 			};
 			decoration = {
     				active_opacity = 1.0;
@@ -82,7 +77,8 @@
 
 
 			bind = [
-				"$mainMod, Q, exec, kitty"
+				"$mainMod, Q, exec, ghostty"
+				
 				"$mainMod, C, killactive"
 				"$mainMod, M, exit"
 				"$mainMod, Space, exec, vicinae toggle"

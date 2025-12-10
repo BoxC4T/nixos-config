@@ -4,8 +4,9 @@
 		./nixvim
 		./hypr
 		./vicinae
-		#./waybar
 		./ashell
+		./wpaperd
+		./ghostty
 	];
 	
 }

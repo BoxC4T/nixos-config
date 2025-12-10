@@ -3,11 +3,7 @@ let
 	custAliases = {
 		full-clean = ''
 			nix-collect-garbage -d
-
 			sudo nix-collect-garbage -d
-
-			sudo /run/current-system/bin/switch-to-conifguration boot
-
 		'';
 		rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#main-config";
 		full-rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#main-config && home-manager switch --flake ~/nixos-config#home-config";
