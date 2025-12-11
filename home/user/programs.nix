@@ -1,6 +1,12 @@
 {config, pkgs, ...}:
 
 {
+	nixpkgs = {
+	  config = {
+	  allowUnfree = true;
+	  allowUnfreePredicate = (_: true);
+	  };
+	};
 
 	home.packages = with pkgs; [
 		firefox
@@ -11,7 +17,9 @@
 		pulseaudioFull
 		pavucontrol
 		networkmanagerapplet
-		kdePackages.dolphin
+		obsidian
+		vesktop
+		#kdePackages.dolphin
 		
 	];
 

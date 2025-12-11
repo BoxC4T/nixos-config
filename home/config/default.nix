@@ -7,6 +7,7 @@
 		./ashell
 		./wpaperd
 		./ghostty
+		./yazi
 	];
 	
 }
