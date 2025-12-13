@@ -1,13 +1,11 @@
-{ ... }:
-{
-	imports = [
-		./nixvim
-		./hypr
-		./vicinae
-		./ashell
-		./wpaperd
-		./ghostty
-		./yazi
-	];
-	
+{...}: {
+  imports = [
+    ./nixvim
+    ./hypr
+    ./vicinae
+    ./ashell
+    ./wpaperd
+    ./ghostty
+    ./yazi
+  ];
 }

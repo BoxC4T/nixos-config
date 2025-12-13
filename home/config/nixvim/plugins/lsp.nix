@@ -19,10 +19,9 @@
           lua = ["stylua"];
           markdown = ["prettier"];
           nix = ["alejandra"];
-          #ruby = ["rubyfmt"];
+          ruby = ["rubyfmt"];
           terraform = ["tofu_fmt"];
           tf = ["tofu_fmt"];
-          #yaml = ["yamlfmt"]; # NOTE: Does not accept empty lines after keys
           yaml = ["prettier"];
         };
       };

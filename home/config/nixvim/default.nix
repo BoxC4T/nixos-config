@@ -1,9 +1,6 @@
-{...}:
-{
+{...}: {
   imports = [
     ./nvim.nix
     ./plugins
-
   ];
-
 }

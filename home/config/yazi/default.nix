@@ -1,16 +1,15 @@
-{ ... }:
-{
+{...}: {
   programs.yazi = {
     enable = true;
     settings = {
       log = {
-	enabled = false;
+        enabled = false;
       };
       mgr = {
-	show_hidden = false;
-	sort_by = "mtime";
-	sort_dir_first = true;
-	sort_reverse = true;
+        show_hidden = false;
+        sort_by = "mtime";
+        sort_dir_first = true;
+        sort_reverse = true;
       };
     };
   };

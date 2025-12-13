@@ -4,7 +4,6 @@
       enable = true;
     };
 
-    
     undotree = {
       enable = true;
       settings = {
@@ -44,8 +43,8 @@
           "EndOfBuffer"
         ];
         exclude_groups = [
-	  #"LineNr"
-	  #"SignColumn"
+          #"LineNr"
+          #"SignColumn"
         ];
       };
     };

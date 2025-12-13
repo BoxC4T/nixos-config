@@ -1,25 +1,22 @@
-{ pkgs, ...}:
+{pkgs, ...}: {
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
-{
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = ["gtk"];
+      hyprland.default = [
+        "gtk"
+        "hyprland"
+      ];
+    };
 
-	programs.hyprland = {
-		enable = true;
-		withUWSM = true;
-	};
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  };
 
-	xdg.portal = {
-		enable = true;
-		xdgOpenUsePortal = true;
-		config = {
-			common.default = [ "gtk" ];
-			hyprland.default = [
-				"gtk"
-				"hyprland"
-			];
-		};
-
-		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-	};
-
-	environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }

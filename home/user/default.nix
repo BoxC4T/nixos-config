@@ -1,9 +1,7 @@
-{ ... }:
-
-{
-	imports = [
-		./shell.nix
-		./programs.nix
-		./git.nix
-	];
+{...}: {
+  imports = [
+    ./shell.nix
+    ./programs.nix
+    ./git.nix
+  ];
 }

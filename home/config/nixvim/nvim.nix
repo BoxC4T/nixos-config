@@ -1,9 +1,6 @@
-{inputs, ...}:
-
-{
-
+{inputs, ...}: {
   imports = [
-      inputs.nixvim.homeModules.nixvim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   programs.nixvim = {
@@ -11,18 +8,13 @@
     opts = {
       number = true;
       shiftwidth = 2;
-      completeopt = [ "menu" "menuone" "noselect" ];
+      completeopt = ["menu" "menuone" "noselect"];
       termguicolors = true;
     };
 
     colorschemes.nightfox = {
       enable = true;
       flavor = "duskfox";
-    };
-
-    dependencies = {
-      #chafa.enable = true;
-      #imagemagick.enable = true;
     };
   };
 }

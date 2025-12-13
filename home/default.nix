@@ -1,12 +1,10 @@
-{ config, pkgs, pkgs-unstable, lib, imputs, ...}:
+{...}: {
+  imports = [
+    ./config
+    ./user
+  ];
 
-{
-	imports = [
-		./config 
-		./user
-	];
-	
-	home.username = "cat";
-	home.homeDirectory = "/home/cat";
-	home.stateVersion = "25.11";
+  home.username = "cat";
+  home.homeDirectory = "/home/cat";
+  home.stateVersion = "25.11";
 }
