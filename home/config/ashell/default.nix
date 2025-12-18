@@ -26,14 +26,20 @@
         font_name = "Comic Sans MS";
         style = "Islands";
         opacity = 1.0;
-        background_color = "#1e1e2e";
-        primary_color = "#b077ed";
-        secondary_color = "#11111b";
-        success_color = "#a6e3a1";
-        danger_color = "#f38ba8";
-        text_color = "#bc85ff";
-        workspace_colors = ["#964df0"];
-        special_workspace_colors = ["#964df0"];
+        primary_color = "#232136";
+        success_color = "#9ece6a";
+        text_color = "#ffffff";
+        workspace_colors = ["#ffffff" "#9ece6a"];
+        danger_color = {
+          base = "#f7768e";
+          weak = "#e0af68";
+        };
+        background_color = {
+          base = "#191726";
+          weak = "#24273a";
+          strong = "#414868";
+        };
+        secondary_color = "#0c0d14";
       };
       settings = {
         lock_cmd = "hyprlock &";

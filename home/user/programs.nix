@@ -18,9 +18,11 @@
     obsidian
     vesktop
     blueberry
+    hyprpicker
 
     rustc
     cargo
     gcc
+    bun
   ];
 }

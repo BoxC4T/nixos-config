@@ -1,5 +1,7 @@
-keyboard lighting controll in os?
-
 finishing config
-	nvim
-	hyprlock
+  nvim (probly good fn)
+  hyprlock
+  walker
+  
+get the proper color scheme for the os (some where in the lilac/light purple area)
+

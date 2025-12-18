@@ -3,7 +3,6 @@
     enable = true;
     package = null;
     portalPackage = null;
-
     xwayland = {
       enable = true;
     };
@@ -71,11 +70,11 @@
       #};
 
       bind = [
-        "$mainMod, Q, exec, ghostty"
-
-        "$mainMod, C, killactive"
+        "$mainMod, C, exec, ghostty"
+        "$mainMod, P, exec, hyprpicker"
+        "$mainMod, K, killactive"
         "$mainMod, M, exit"
-        "$mainMod, Space, exec, vicinae toggle"
+        "$mainMod, Space, exec, walker"
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -86,6 +85,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        #"bind = $mainMod ALT, W, exec, pkill waybar && hyprctl dispatch exec waybar"
       ];
 
       bindel = [
@@ -98,14 +98,13 @@
       ];
 
       exec-once = [
-        "vicinae server"
         "ashell"
       ];
     };
   };
   home.pointerCursor = {
     gtk.enable = true;
-    x11.enable = true;
+    # x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 16;
