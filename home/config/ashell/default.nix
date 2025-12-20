@@ -23,24 +23,95 @@
       };
 
       appearance = {
-        font_name = "Comic Sans MS";
+        font_name = "victor-mono";
         style = "Islands";
         opacity = 1.0;
-        primary_color = "#232136";
-        success_color = "#9ece6a";
-        text_color = "#ffffff";
-        workspace_colors = ["#ffffff" "#9ece6a"];
-        danger_color = {
-          base = "#f7768e";
-          weak = "#e0af68";
+        menu = {
+          opacity = 1.0;
+          backdrop = 0.0;
         };
         background_color = {
-          base = "#191726";
-          weak = "#24273a";
-          strong = "#414868";
+          base = "#232136";
+          strong = "#433c59";
+          weak = "#302b40";
+          #text = ""; #unused
         };
-        secondary_color = "#0c0d14";
+        primary_color = {
+          base = "#302b40";
+          strong = "#e0def4";
+          weak = "#433c59";
+          #text = ""; #unused
+        };
+
+        secondary_color = {
+          base = "#433c59";
+          strong = "#433c59";
+          #weak = ""; #unused
+          #text = ""; #unused
+        };
+
+        success_color = {
+          base = "#a3be8c";
+          #strong = ""; #unused
+          #weak = ""; #unused
+          #text = ""; #unused
+        };
+
+        danger_color = {
+          base = "#eb6f92";
+          #strong = ""; #unused
+          #weak = ""; #unused
+          #text = ""; #unused
+        };
+
+        text_color = {
+          base = "#e0def4";
+          #strong = ""; #unused
+          #weak = ""; #unused
+          #text = ""; #unused
+        };
+
+        workspace_colors = [
+          {
+            base = "#302b40";
+            #strong = ""; #unused
+            #weak = ""; #unused
+            #text = ""; #unused
+          }
+        ];
+
+        #special_workspace_colors = [ #dont need
+        #  {
+        #    base = "";
+        #    strong = "";
+        #    weak = "";
+        #    text = "";
+        #  }
+        #];
       };
+      #background = #232136
+      #foreground = #e0def4
+      #selection-background = #433c59
+      #selection-foreground = #e0def4
+      #cursor-color = #e0def4
+      #cursor-text = #232136
+      #palette = 0=#393552
+      #palette = 1=#eb6f92
+      #palette = 2=#a3be8c
+      #palette = 3=#f6c177
+      #palette = 4=#569fba
+      #palette = 5=#c4a7e7
+      #palette = 6=#9ccfd8
+      #palette = 7=#e0def4
+      #palette = 8=#47407d
+      #palette = 9=#f083a2
+      #palette = 10=#b1d196
+      #palette = 11=#f9cb8c
+      #palette = 12=#65b1cd
+      #palette = 13=#ccb1ed
+      #palette = 14=#a6dae3
+      #palette = 15=#e2e0f7
+
       settings = {
         lock_cmd = "hyprlock &";
         audio_sinks_more_cmd = "pavucontrol -t 3";
@@ -53,11 +124,6 @@
       };
       clock = {
         format = "%a %d %b %Y | %R:%S";
-      };
-
-      appearance.menu = {
-        opacity = 0.7;
-        backdrop = 0.3;
       };
     };
   };

@@ -85,6 +85,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        "$shiftMod, Print, exec, hyprshot -m region --clipboard-only"
         #"bind = $mainMod ALT, W, exec, pkill waybar && hyprctl dispatch exec waybar"
       ];
 

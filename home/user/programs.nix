@@ -19,10 +19,13 @@
     vesktop
     blueberry
     hyprpicker
+    hyprshot
 
     rustc
     cargo
     gcc
     bun
+    yt-dlp
+    spotdl
   ];
 }
