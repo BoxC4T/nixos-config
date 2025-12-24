@@ -1,8 +1,7 @@
-{...}: {
-  imports = [
-    ./git.nix
-    ./syntax_highlight.nix
-    ./ui.nix
-    ./lsp.nix
-  ];
+{lib, ...}: {
+  imports = with builtins;
+  with lib;
+    map (fn: ./${fn}) (
+      filter (fn: (fn != "default.nix" && !hasSuffix ".md" "${fn}")) (attrNames (readDir ./.))
+    );
 }

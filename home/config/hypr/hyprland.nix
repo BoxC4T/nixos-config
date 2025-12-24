@@ -15,11 +15,12 @@
         "col.active_border" = "rgba(00000000)";
         "col.inactive_border" = "rgba(00000000)";
         resize_on_border = true;
-        allow_tearing = false;
+        allow_tearing = true;
       };
       decoration = {
         active_opacity = 1.0;
         inactive_opacity = 0.75;
+        rounding = 20;
       };
       animations = {
         enabled = true;
@@ -64,10 +65,10 @@
         };
       };
 
-      #device {
-      #	name = "logitech-g305-1"
-      #	sensitivity = -1.0
-      #};
+      device = {
+        name = "logitech-usb-receiver-consumer-control-1";
+        sensitivity = -1.0;
+      };
 
       bind = [
         "$mainMod, C, exec, ghostty"

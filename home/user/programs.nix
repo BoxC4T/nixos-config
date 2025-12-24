@@ -20,6 +20,8 @@
     blueberry
     hyprpicker
     hyprshot
+    krita
+    prettier
 
     rustc
     cargo
