@@ -1,11 +1,10 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
+    systemd.enable = false;
     enable = true;
     package = null;
     portalPackage = null;
-    xwayland = {
-      enable = true;
-    };
+
     settings = {
       general = {
         "$mainMod" = "SUPER";
@@ -51,6 +50,7 @@
           "workspacesOut, 1, 1.94, almostLinear, fade"
         ];
       };
+
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
@@ -110,5 +110,10 @@
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 16;
+  };
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    ELECTRON_OZONE_PLATFORM = "wayland";
   };
 }

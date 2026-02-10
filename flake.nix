@@ -6,6 +6,7 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nur.url = "github:nix-community/nur";
 
     nixvim = {
       url = "github:nix-community/nixvim/nixos-25.11";
@@ -23,6 +24,7 @@
     nixpkgs-unstable,
     home-manager,
     nixos-hardware,
+    nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -44,7 +46,10 @@
     homeConfigurations = {
       home-config = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [./home];
+        modules = [
+          ./home
+          {nixpkgs.overlays = [inputs.nur.overlays.default];}
+        ];
         extraSpecialArgs = {
           inherit pkgs-unstable inputs;
         };

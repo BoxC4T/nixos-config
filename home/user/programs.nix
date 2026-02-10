@@ -21,13 +21,6 @@
     hyprpicker
     hyprshot
     krita
-    prettier
-
-    rustc
-    cargo
-    gcc
-    bun
-    yt-dlp
-    spotdl
+    nur.repos.Ev357.helium
   ];
 }
