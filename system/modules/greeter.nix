@@ -4,7 +4,7 @@
     useTextGreeter = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time  --cmd hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time  --cmd start-hyprland ";
         user = "cat";
       };
     };

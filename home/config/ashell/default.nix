@@ -6,7 +6,7 @@
       modules = {
         left = [
           [
-            "Clock"
+            "Tempo"
             "Workspaces"
           ]
         ];
@@ -122,8 +122,9 @@
         remove_airplane_btn = false;
         remove_idle_btn = true;
       };
-      clock = {
-        format = "%a %d %b %Y | %R:%S";
+      tempo = {
+        clock_format = "%a %d %b %Y | %R:%S";
+        weather_location = {City = "Kaunas";};
       };
     };
   };

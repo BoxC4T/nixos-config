@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -7,7 +11,7 @@
   };
 
   home.packages = with pkgs; [
-    firefox
+    gh-markdown-preview
     gh
     lazygit
     brightnessctl
@@ -16,11 +20,14 @@
     pavucontrol
     networkmanagerapplet
     obsidian
-    vesktop
-    blueberry
+    equicord
+    blueman
     hyprpicker
     hyprshot
     krita
     nur.repos.Ev357.helium
+    github-desktop
+    pkgs-unstable.freecad
+    pkgs-unstable.feishin
   ];
 }

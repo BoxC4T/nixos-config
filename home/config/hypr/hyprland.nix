@@ -4,10 +4,10 @@
     enable = true;
     package = null;
     portalPackage = null;
-
+    configType = "hyprlang";
     settings = {
+      "$mod" = "SUPER";
       general = {
-        "$mainMod" = "SUPER";
         gaps_in = 0;
         gaps_out = 0;
         border_size = 0;
@@ -71,21 +71,21 @@
       };
 
       bind = [
-        "$mainMod, C, exec, ghostty"
-        "$mainMod, P, exec, hyprpicker"
-        "$mainMod, K, killactive"
-        "$mainMod, M, exit"
-        "$mainMod, Space, exec, walker"
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
-        "$mainMod, 6, workspace, 6"
-        "$mainMod, 7, workspace, 7"
-        "$mainMod, 8, workspace, 8"
-        "$mainMod, 9, workspace, 9"
-        "$mainMod, 0, workspace, 10"
+        "$mod, C, exec, ghostty"
+        "$mod, P, exec, hyprpicker"
+        "$mod, K, killactive"
+        "$mod, M, exit"
+        "$mod, Space, exec, walker"
+        "$mod, 1, workspace, 1"
+        "$mod, 2, workspace, 2"
+        "$mod, 3, workspace, 3"
+        "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
+        "$mod, 6, workspace, 6"
+        "$mod, 7, workspace, 7"
+        "$mod, 8, workspace, 8"
+        "$mod, 9, workspace, 9"
+        "$mod, 0, workspace, 10"
         "$shiftMod, Print, exec, hyprshot -m region --clipboard-only"
         #"bind = $mainMod ALT, W, exec, pkill waybar && hyprctl dispatch exec waybar"
       ];
@@ -101,6 +101,7 @@
 
       exec-once = [
         "ashell"
+        "elephant"
       ];
     };
   };

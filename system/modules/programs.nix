@@ -10,7 +10,6 @@
     gnumake
     home-manager
     ghostty
-    neofetch
     wget
     hyprpolkitagent
   ];

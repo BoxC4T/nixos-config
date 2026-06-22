@@ -13,7 +13,7 @@
     };
 
     transparent = {
-      enable = true;
+      enable = false;
       settings = {
         groups = [
           "Normal"

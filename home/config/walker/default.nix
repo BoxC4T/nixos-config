@@ -2,6 +2,7 @@
   services.walker = {
     enable = true;
     systemd.enable = true;
+    enableElephantIntegration = true;
     settings = {
       app_launch_prefix = "";
       as_window = true;
@@ -14,6 +15,17 @@
       terminal_title_flag = "";
       theme = "default";
       timeout = 0;
+    };
+  };
+  services.elephant = {
+    enable = true;
+    settings = {
+      providers = {
+        default = [
+          "desktopapplications"
+          "runner"
+        ];
+      };
     };
   };
 }
