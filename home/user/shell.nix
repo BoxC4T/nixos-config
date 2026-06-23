@@ -6,9 +6,6 @@
   programs = {
     nushell = {
       enable = true;
-      # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
-      #configFile.source = ./.../config.nu;
-      # for editing directly to config.nu
       extraConfig = ''
                # Common ls aliases and sort them by type and then name
                # Inspired by https://github.com/nushell/nushell/issues/7190
@@ -95,22 +92,19 @@
                  append /usr/bin/env
                )
       '';
+
+      # The config.nu can be anywhere you want if you like to edit your Nushell with Nu
+      #configFile.source = ./.../config.nu;
+      # for editing directly to config.nu
     };
     carapace.enable = true;
     carapace.enableNushellIntegration = true;
 
     starship = {
       enable = true;
-      settings = {
-        add_newline = false;
-        character = {
-          success_symbol = "[➜](bold green)";
-          error_symbol = "[➜](bold red)";
-        };
-      };
-      presets = [
-        "jetpack"
-      ];
+      enableTransience = true;
+      enableNushellIntegration = true;
     };
   };
+  xdg.configFile."starship.toml".source = ./starship.toml;
 }
